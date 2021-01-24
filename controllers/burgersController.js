@@ -9,7 +9,7 @@ var burger = require("../models/burger.js");
 router.get("/", function (req, res) {
   burger.all(function (data) {
     var hbsObject = {
-      cats: data,
+      burgers: data,
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
@@ -18,8 +18,8 @@ router.get("/", function (req, res) {
 
 router.post("/api/burgers", function (req, res) {
   burger.create(
-    ["name", "sleepy"],
-    [req.body.name, req.body.sleepy],
+    ["name", "devour"],
+    [req.body.name, req.body.devour],
     function (result) {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
@@ -34,7 +34,7 @@ router.put("/api/burgers/:id", function (req, res) {
 
   burger.update(
     {
-      sleepy: req.body.sleepy,
+      devour: req.body.devour,
     },
     condition,
     function (result) {
