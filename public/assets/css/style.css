@@ -1,7 +1,29 @@
+body {
+  text-align: left;
+  background-image: url(https://cdn.hipwallpaper.com/i/10/94/boSGHC.png);
+  background-size: 100% 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  background-color: white;
+  width: 500px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  margin: 0 auto;
+  border-radius: 10%;
+}
 li {
+  text-align: center;
   padding: 5px;
   margin: 5px;
   background: #faebd7;
+  width: 400px;
 }
 
 .label {
